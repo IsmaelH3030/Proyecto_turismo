@@ -1,0 +1,79 @@
+body{
+    background-image: url('../img/fondologin.jpg'); 
+    backdrop-filter: blur(3px);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.papi{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.Otrofondo{
+    background-image: url('../img/fondo_atras.png');
+    border: 1px solid black;
+    border-radius: 30px;
+    width: 470px;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.75);
+}
+
+.form-group{
+    padding: 40px;
+    border: 2px solid rgba(0, 255, 251, 0.75);
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    margin: 40px;
+    box-shadow: 0px 0px 20px 5px rgba(0, 255, 251, 0.75);
+    
+}
+
+
+h2{
+    text-align: center;
+    text-shadow: rgb(0, 238, 255) 0 0 10px, /*color neon en las letras*/
+    #00eaff 0 0 4px,
+    #00ddff 0 0 10px,
+    #00ffea 0 0 10px;
+    color: #ffffff;
+}
+
+input{
+    margin: 10px 0px 40px 0px ;
+    padding: 6px;
+    
+}
+
+.btn{
+    padding: 6px 0px 6px 0px;
+    border-radius: 50px;
+    border: 1px solid rgb(0, 255, 238);
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 7px 1px rgb(0, 238, 255);
+    font-weight: 600; /*para darle grosor a la letra*/
+    cursor: pointer; /*para que el cursor cambie a manito*/
+    outline: none;
+}
+
+a:link {                /* color principal*/
+    color:rgb(47, 0, 255)
+}
+a:visited{              /* color que se muestra con el link ya visitado*/
+    color: rgb(114, 132, 211);
+}
+a:hover{                /* color que se muestra al pasar el mouse por encima*/
+    color: rgb(0, 238, 255);
+}
+a:active{               /* color que se muestra al interactuar con el link*/
+    color: rgb(134, 134, 134);
+}
+
+
+h1{
+    background: #00ddff;
+    font-size: 50px;
+    margin-top: 50px;
+}
