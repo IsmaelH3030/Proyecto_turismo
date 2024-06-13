@@ -1,15 +1,29 @@
-
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static '/css/stilooo.css' %}">
     <title>Document</title>
-    
 </head>
 <body>
-    <h1>HOLAAAA</h1>
+    <h1>Lista de Servicios</h1>
+    {% for servicio in servicios %}
+        <p>
+            {{ servicio.precio }}
+            <br>
+            {{ servicio.descripción_del_lugar }}
+            <br>
+
+            {% if servicio.foto  %}
+                <img src="{{ servicio.foto.url }}" alt="Foto del Lugar" style="max-width:100px;">
+            {% else %}
+                <span>No hay foto disponible</span>
+            {% endif %}
+            <hr>
+        </p>
+        <br>
+    {% endfor %}
+
 </body>
 </html>

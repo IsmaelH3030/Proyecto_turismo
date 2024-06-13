@@ -1,50 +1,44 @@
 <!doctype html>
 {% load static %}
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Con Bootstrap</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static '/css/stilooo.css' %}">
-
-    <link rel="website icon" type="png" href="{% static 'img/fondologin.jpg' %}">  <!--para poner un logo en la paguina -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Con Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/stilooo.css' %}">
+  <link rel="icon" type="image/png" href="{% static 'img/fondologin.jpg' %}"> <!-- Corrección del atributo rel para el icono -->
 
 </head>
-  <body>
-      <div class="papi">
-          <div class="Otrofondo">
-              <form class="form-group">
-                  <h2>Login</h2>
-                  <hr>
-                  <br>
-                  <div class="mb-3">
-                    <label for="" class="form-label" >Tu email</label>
-                    <input type="email" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ismael_H...">
-                  </div>
-                  <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                    <input type="password" required class="form-control" id="exampleInputPassword1" placeholder="12Abcdefg...">
-                  </div>
-                  <!-- required (es para que se requiera llenar los campos)-->
-                  
-                  <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Recordar contraseña</label>
-                  </div>
-                  <button type="submit" class="btn btn-primary form-control">Enviar</button>
-                  <br>
-                  <div>
-                    <br>
-                      <a target="blank" href="https://www.youtube.com/watch?v=Hmdx9EIQCjk">¿Olvidaste tu contraseña?</a>
-              </div>
-            </form>
-          </div>
-      
-      </div>
+<body>
+  <div class="papi">
+    <div class="Otrofondo">
+      <form action="{% url 'index' %}" method="get" class="form-group">
+        <h2>Login</h2>
+        <hr>
+        <br>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Tu email</label>
+          <input type="email" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ismael_H...">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+          <input type="password" required class="form-control" id="exampleInputPassword1" placeholder="12Abcdefg...">
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Recordar contraseña</label>
+        </div>
+        <button type="submit" class="btn btn-primary form-control">Ingresar</button>
+        <br>
+        <div>
+          <br>
+          <a target="_blank" href="https://www.youtube.com/watch?v=Hmdx9EIQCjk">¿Olvidaste tu contraseña?</a>
+        </div>
+      </form>
+    </div>
+  </div>
 
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
 </html>
